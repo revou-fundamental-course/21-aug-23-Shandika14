@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SHANDIKA | Website</title>
+ <!-- Favicon -->
+ <link rel="icon" href="./asset/Logo-RevoU-5.png" type="image/x-icon">
+
+  <!-- css reset -->
+  <link rel="stylesheet" href="./css/reset-css.css">
+
+  <!-- index.css -->
+  <link rel="stylesheet" href="./css/style.css">
+
+  <!-- font awesome => icon -->
+  <link href="./css/all.min.css" rel="stylesheet">
+<style></style></head>
+<body>
+
+  <!-- navbar -->
+  <nav>
+    <div class="container">
+      <div class="nav-logo">
+        <a href="https://revou.co/" target="_blank">
+          <img src="./asset/Logo-RevoU-5.png" alt="RevoU" width="50">
+        </a>
+      </div>
+      <div class="nav-menu">
+        <ul>
+          <li><a href="C:\Users\HP\Pictures\My Website.html">Home</a></li>
+          <li><a href="C:\Users\HP\Pictures\My Profile.html">Our Profile</a></li>
+          <li><a href="C:\Users\HP\Pictures\My Achievement.html">Achievement</a></li>
+          <li><a href="C:\Users\HP\Pictures\Message US.html">Message Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- navbar -->
+
+  <!-- header -->
+  <header>
+    <div class="container">
+      <div class="header-judul">
+        <h1>Hai <span id="username"></span>, Welcome To My Website</h1>
+        <p>Ini adalah website latihan Pertama Saya</p>
+      </div>
+      <div class="headquarter-quote">
+        <marquee behavior="" direction="" width="100%" vspace="20px">Terimakasih Telah Berkunjung di Website Kami</marquee>
+      </div>
+      <div>
+        <img
+          class="img-slideshow"
+          src="https://source.unsplash.com/random/1080x400?landscape&sig=1"
+        />
+        <img
+          class="img-slideshow"
+          src="https://source.unsplash.com/random/1080x400?landscape&sig=2"
+        />
+        <img
+          class="img-slideshow"
+          src="https://source.unsplash.com/random/1080x400?landscape&sig=3"
+        />
+        <img
+          class="img-slideshow"
+          src="https://source.unsplash.com/random/1080x400?landscape&sig=4"
+        />
+        <button onclick="plusDivs(-1)">Previous</button>
+        <button onclick="plusDivs(1)">Next</button>
+      </div>
+
+      <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+          showDivs((slideIndex += n));
+        }
+
+        function showDivs(n) {
+          var i;
+          var imgList = document.getElementsByClassName("img-slideshow");
+          if (n > imgList.length) slideIndex = 1;
+          else if (n < 1) slideIndex = imgList.length;
+
+          for (i = 0; i < imgList.length; i++) {
+            imgList[i].style.display = "none";
+          }
+
+          imgList[slideIndex - 1].style.display = "block";
+        }
+
+        setInterval(() => {
+          plusDivs(1);
+        }, 1000);
+      </script>
+    </div>
+  </header>
+  <!-- header -->
+
+  <!-- headquarter -->
+  <main class="headquarter">
+    <div class="container">
+      <div class="headquarter-judul">
+        <h1>Our Facilitation</h1>
+      </div>
+      <div class="headquarter-kota">
+        <div class="bulat">
+          <img src="./asset/team-1.jpg" alt="room 1" width="100">
+          <p>Professional Teacher</p>
+        </div>
+        <div class="bulat">
+          <img src="https://images.squarespace-cdn.com/content/v1/608892bc6c86d971c15161ee/1619811157517-CJBKURTH77H2YK5QNWI1/image-asset.jpeg?format=2500w" alt="room 1" width="100">
+          <p>Sport Field</p>
+        </div>
+        <div class="bulat">
+          <img src="https://www.acs.org/content/acs/en/education/policies/middle-and-high-school-chemistry/classroom/jcr:content/bottomContent/columnsbootstrap/column1/image.scale.large.jpg/1574355187340.jpg" alt="room 1" width="100">
+          <p>Classroom</p>
+        </div>
+        <div class="bulat">
+          <img src="https://arsitag.b-cdn.net/wp-content/uploads/2023/07/food-court-768x432.jpg" alt="room 1" width="100">
+          <p>Food Court</p>
+        </div>
+        <div class="bulat">
+          <img src="./asset/isp_icon.png" alt="room 1" width="100">
+          <p>WIFI</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- headquarter -->
+
+    <!-- index.css -->
+    <link rel="stylesheet" href="/css/style.css2.css">
+
+  <!-- navbar -->
+  <body>
+    <div class="container">
+      <div class="main-judul">
+        <h1>Isi Data  Diri dan Pesan Anda!</h1>
+      </div>
+      <div class="form-section">
+        <form name="message-form" onsubmit="return validateForm()">
+          Nama: <input placeholder="Nama" type="text" name="full-name" />
+          <br />
+
+          Tanggal Lahir:
+          <input type="date" name="birth-date" />
+          <br />
+
+          Jenis Kelamin:
+          <input type="radio" id="male" name="gender" value="Male" />
+          <label for="male">Male</label>
+          <input type="radio" id="female" name="gender" value="Female" />
+          <label for="female">Female</label>
+          <br />
+
+          Pesan:
+          <textarea placeholder="Pesan" name="messages"></textarea>
+          <br />
+
+          <input type="submit" value="Submit" />
+        </form>
+        <script>
+          function validateForm() {
+            var name = document.forms["message-form"]["full-name"].value;
+            var date = document.forms["message-form"]["birth-date"].value;
+            var gender = document.forms["message-form"]["gender"].value;
+            var messages = document.forms["message-form"]["messages"].value;
+
+            if (name == "" || date == "" || gender == "" || messages == "") {
+              alert("Kolom Pesan Wajib Diisi, Tidak Boleh Dikosongkan !!");
+              return false;
+            }
+
+            document.getElementById("sender-full-name").innerText = name;
+            document.getElementById("sender-birth-date").innerText = date;
+            document.getElementById("sender-gender").innerText = gender;
+            document.getElementById("sender-messages").innerText = messages;
+            return false;
+          }
+        </script>
+
+        <div class="form-output">
+          <p>Nama: <span id="sender-full-name"></span></p>
+          <p>Tanggal Lahir: <span id="sender-birth-date"></span></p>
+          <p>Jenis Kelamin: <span id="sender-gender"></span></p>
+          <p>Pesan: <span id="sender-messages"></span></p>
+        </div>
+      </div>
+  
+  <!-- footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-sosmed">
+        <a href="https://facebook.com/" target="_blank">
+          <i class="fab fa-github fa-2x" style="color: #1d1a1a;"></i>
+        </a>
+        <a href="https://twitter.com/" target="_blank">
+          <i class="fab fa-linkedin fa-2x" style="color: #2867B2;"></i>
+        </a>
+        <a href="https://instagram.com" target="_blank">
+          <i class="fas fa-blog fa-2x" style="color: #080808;"></i>
+        </a>
+      </div>
+      <div class="footer-copyright">
+        <p>2023©Copyright|CreatedByShandikaSayyid|SupportByRevoU</p>
+      </div>
+    </div>
+  </footer>
+  <!-- footer -->
+
+
+  <script>
+    let userName = prompt("Masukkan nama Anda dibawah!");
+    document.getElementById("username").innerText = userName;
+  </script>
+    <script src="/js/script.js"></script>
+
+</body></html>
